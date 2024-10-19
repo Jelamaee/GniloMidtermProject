@@ -8,24 +8,32 @@ body,html {
     scroll-behavior: smooth;
 }
 
-/*header*/
+/* Header */
 .site-header {
     background-color: #F5EFFF;
-    padding: 1em;
-    position: relative;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end; /* Align the nav bar to the right for larger screens */
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
 }
 
+/* For larger devices */
 .nav {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-end; /* Ensure the nav items are aligned to the right for larger screens */
     align-items: center;
-    gap: 1.5em;
 }
 
 .hamburger {
-    display: none;
+    display: none; /* Hide by default for larger screens */
     cursor: pointer;
     font-size: 2em;
+    color: black; /* Ensure the hamburger is visible */
 }
 
 .nav-list {
@@ -33,10 +41,11 @@ body,html {
     margin: 0;
     padding: 0;
     display: flex;
+    align-items: center;
 }
 
 .nav-item {
-    margin-right: 40px;
+    margin-right: 40px; /* Space between nav items */
 }
 
 .nav a {
@@ -52,31 +61,41 @@ body,html {
 /* Media queries for smaller devices */
 @media (max-width: 900px) {
     .nav {
-        justify-content: flex-start;
+        justify-content: flex-start; /* Align to the left on small screens */
     }
 
     .nav-list {
-        display: none; /* Hide the list by default on small screens */
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
+        position: fixed;
+        top: 0;
+        left: -100%; /* Start off-screen on the left */
+        height: 100vh;
+        width: 30%; /* Adjust as needed */
         background-color: #F5EFFF;
+        flex-direction: column;
+        padding: 1em 1em; /* Padding from the left */
+        transition: left 0.3s ease-in-out;
     }
 
     .nav-item {
-        margin: 20px 0;
+        margin: 20px 0; /* Spacing for vertical items */
     }
 
     .hamburger {
-        display: block; /* Show the hamburger menu */
+        display: block; /* Show the hamburger on mobile */
+        position: absolute;
+        left: 1em; /* Position it to the left */
     }
 
-    .hamburger.active + .nav-list {
-        display: flex; /* Show the nav list when hamburger is clicked */
+    .nav-list.active {
+        left: 0; /* Slide in from the left when active */
     }
 }
+
+/* Ensure that the active state for the hamburger is correctly applied */
+.hamburger.active + .nav-list {
+    left: 0; /* Make sure nav list slides in when hamburger is clicked */
+}
+
 
 /*logging in*/
 .login-main{
@@ -86,7 +105,6 @@ body,html {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Arial, sans-serif;
     position: relative;
 }
   
@@ -157,6 +175,12 @@ button:hover {
 }
 
 /*about me*/
+#portfolio h1 {
+    text-align: center; /* Center the text horizontally */
+    margin: 80px 0; /* Add some margin above and below */
+    color: black; /* Ensure the text color is set */
+}
+
 #middle {
     width: 100%;
     height: auto;
@@ -164,28 +188,55 @@ button:hover {
     background-repeat: no-repeat;
     color: black;
     display: flex;
-    align-items: center; 
+    justify-content: center; /* Center content horizontally */
     padding: 50px; 
+}
+
+.content-container {
+    display: flex;
+    align-items: center; 
+    max-width: 1200px; /* Set a max width for the container */
+    padding: 20px; /* Add padding around the content */
+    background-color: #f4f4f9; /* Subtle background for lab content */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow effect */
+    margin-top: 50px; /* Move the section down */
+}
+
+.image-container {
+    padding: 15px; /* Add padding around the image */
+    background-color: #E5D9F2; /* Optional: Add a background color */
+    border-radius: 50%; /* Optional: Round the corners */
+    display: flex; /* Center the image within the container */
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+}
+
+.text-container {
+    padding: 15px; /* Add padding around the text */
+    background-color: #E5D9F2; /* Optional: Add a different background color */
+    border-radius: 10px; /* Optional: Round the corners */
+    max-width: 800px; /* Set a max width for the text container */
+    margin-left: 30px; /* Add some space between the image and text */
 }
 
 #middle img {
     width: 250px;
     height: auto;
     border-radius: 50%;
-    flex-shrink: 0; 
-    margin-right: 100px; 
 }
 
 #middle h3 {
     font-size: 1.5em;
-    max-width: 800px; 
     line-height: 1.6;
 }
 
 #portfolio {
     width:80%;
-    padding:2% 10%;
+    padding:50% 20%;
 }
+
 #portfolio div h1 {
     font-size:40px;
     background-image: linear-gradient(to left, #FF416C 0%, #FF4B2B 100%);
@@ -199,6 +250,7 @@ button:hover {
     animation: Gradient 20s ease infinite;
     font-family: 'Comfortaa', cursive;
 }
+
 #skills {
     margin:4vh 0px !important;
     padding:2vh 0px !important;
@@ -289,21 +341,207 @@ button:hover {
     color:#fff;
 }
 
-/*lab activities*/
+/* Portfolio Styling */
+#portfolio {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Lab Section */
+.lab {
+    background-color: #f4f4f9; /* Subtle background for lab content */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow effect */
+    margin-top: 80px; /* Move the section down */
+}
+
+.lab h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #e76f51; /* Customize the title color */
+}
+
+.lab p {
+    font-size: 18px;
+    line-height: 1.6;
+    padding: 15px;
+    background-color: #E5D9F2;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Collage images styling */
 .collage {
     display: flex;
-    justify-content: space-around; 
-    gap: 10px; 
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 .collage img {
-    width: 45%; 
-    height: auto; 
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    height: auto;
 }
 
-.description {
-    margin-top: 20px; 
+/* Button Styling */
+.button-container {
+    text-align: space-between;
+    margin-bottom: 20px;
 }
+
+.toggle-btn {
+    background-color: #A594F9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 5px;
+}
+
+.toggle-btn:hover {
+    background-color: #CDC1FF;
+    transform: scale(1.05); /* Slightly grow on hover */
+}
+
+.toggle-btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Learnings and Challenges Sections */
+.description h3 {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.description p {
+    font-size: 18px;
+    line-height: 1.6;
+    padding: 15px;
+    background-color: #E5D9F2;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    #portfolio {
+        padding: 15px;
+    }
+    
+    .lab1 p, .description p {
+        padding: 12px;
+    }
+
+    .collage img {
+        border-radius: 8px;
+    }
+}
+
+@media (max-width: 576px) {
+    #portfolio {
+        padding: 10px;
+    }
+
+    .lab1 p, .description p {
+        padding: 10px;
+    }
+
+    .collage {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .collage img {
+        width: 100%;
+        border-radius: 6px;
+    }
+}
+
+#know-more {
+    background-color: #f4f4f9; /* Subtle background for lab content */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow effect */
+}
+
+#know-more h2 {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#know-more p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #E5D9F2;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #know-more {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+
+    #know-more h2 {
+        font-size: 1.5rem; /* Slightly reduce heading size */
+    }
+
+    #know-more p {
+        font-size: 0.95rem; /* Adjust paragraph font size */
+    }
+}
+
+@media (max-width: 480px) {
+    #know-more {
+        padding: 10px; /* Further reduce padding on very small screens */
+    }
+
+    #know-more h2 {
+        font-size: 1.3rem; /* Smaller heading size */
+    }
+
+    #know-more p {
+        font-size: 0.9rem; /* Adjust font size for mobile */
+    }
+}
+
+
+.travels {
+    padding: 30px 0 60px 0; }
+    .travels .title {
+      margin-bottom: 30px; }
+    .travels .swiper-container {
+      width: 100%;
+      height: 100%; }
+    .travels .swiper-slide {
+      text-align: center;
+      margin-bottom: 40px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .travels .swiper-slide img {
+        width: 100%;
+        height: auto; }
 
 #details {
     margin:6vh 0px;
@@ -360,7 +598,6 @@ button:hover {
 }
 #footer a {
     font-size:18px;
-    background-image: linear-gradient(to left, #FF416C 0%, #FF4B2B 100%);
     -webkit-background-clip:text;
     background-clip:text;
     -webkit-text-fill-color: transparent;
