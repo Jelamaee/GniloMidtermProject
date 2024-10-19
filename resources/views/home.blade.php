@@ -9,7 +9,7 @@
 
 <div id="middle">
     <img src="{{ asset('img/jela.jpg') }}" alt="Jela">
-    <h3>Hi! I'm Jela. I'm happy that your reading this. Want to know more about Jela?</h3>
+    <h3>Hi! I'm Jela Mae. A 3rd year BSIT student. I'm happy that your reading this. Want to know more about Jela?</h3>
 </div>
  
 @endsection
