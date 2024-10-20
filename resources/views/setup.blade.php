@@ -26,10 +26,12 @@
             <!-- Learnings Section -->
             <div id="learnings" style="display:none;">
                 <h3>Learnings:</h3> 
-                <p>In this laboratory activity, I learned how to install and set up Laravel, push the project to a Git repository, 
-                    create views and routes, and understand the purpose of each key directory in Laravel. I also learned how to manage routes. 
-                    It was somewhat amusing because, each time I ran the program, it kept showing a '404 Not Found' error since I forgot to add the routes.
-                    Despite the challenges, I enjoyed the activity, although it was overwhelming at times. As this was new to me, I felt a bit challenged but fulfilled after completing the lab.
+                <p>In this laboratory activity, we were told to create any kind of website we prefer, and I decided to create a simple website 
+                    about the beautiful tourists spots and destinations here in Albay. Upon doing this activity, I learned how to install and set up Laravel, push
+                    the project to a Git repository, create views and routes, and understand the purpose of each key directory in Laravel.
+                    I also learned how to manage routes. It was somewhat amusing because, each time I ran the program, it kept showing a 
+                    '404 Not Found' error since I forgot to add the routes. Despite the challenges, I enjoyed the activity, although it was 
+                    overwhelming at times. As this was new to me, I felt a bit challenged but fulfilled after completing the lab.
                 </p>
             </div>
 

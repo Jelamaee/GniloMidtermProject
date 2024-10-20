@@ -53,7 +53,7 @@
         </a>
     </div>
     <div class="copyright">
-        &copy; <span id="current-year"></span> Jela Mae Gñilo. All rights reserved.
+        &copy; <span id="current-year"></span> All rights reserved.
     </div>
 </div>
 

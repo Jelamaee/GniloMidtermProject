@@ -96,7 +96,7 @@ body,html {
     left: 0; /* Make sure nav list slides in when hamburger is clicked */
 }
 
-/*logging in*/
+/*Login Page*/
 .login-main{
     margin: 0;
     padding: 0;
@@ -159,7 +159,7 @@ button:hover {
     background-color: #A594F9;
     }
 
-/*about me*/
+/*Homepage*/
 #portfolio h1 {
     text-align: center; /* Center the text horizontally */
     margin: 80px 0; /* Add some margin above and below */
@@ -236,21 +236,62 @@ button:hover {
     font-family: 'Times New Roman', Arial, Helvetica, sans-serif;
 }
 
-#skills {
-    margin:4vh 0px !important;
-    padding:2vh 0px !important;
+#know-more h2 {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-weight:bold;
 }
-#work {
-    margin:4vh 0px !important;
-    padding:2vh 0px !important;
+
+#know-more p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #E5D9F2;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #know-more {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+
+    #know-more h2 {
+        font-size: 1.5rem; /* Slightly reduce heading size */
+    }
+
+    #know-more p {
+        font-size: 0.95rem; /* Adjust paragraph font size */
+    }
+}
+
+@media (max-width: 480px) {
+    #know-more {
+        padding: 10px; /* Further reduce padding on very small screens */
+    }
+
+    #know-more h2 {
+        font-size: 1.3rem; /* Smaller heading size */
+    }
+
+    #know-more p {
+        font-size: 0.9rem; /* Adjust font size for mobile */
+    }
+}
+
 #contact {
     margin:4vh 0px !important;
     padding:2vh 0px !important;
 }
+
 #contact form {
     width:100%;
 }
+
 #contact form input {
     width:46%;
     margin:20px 1%;
@@ -263,6 +304,7 @@ button:hover {
     transition:0.4s ease-in-out;
     color:#000;
 }
+
 #contact form textarea {
     width:96%;
     margin:20px 1%;
@@ -277,14 +319,18 @@ button:hover {
     transition:0.4s ease-in-out;
     color:#fff;
 }
+
 #contact form input:focus {
     outline:none;
     border-bottom:2px solid rgba(255,255,255,1);
 }
+
 #contact form textarea:focus {
     outline:none;
     border-bottom:2px solid rgba(255,255,255,1);
 }
+
+
 ::placeholder {
     color: #000;
 }
@@ -308,15 +354,13 @@ button:hover {
     color: #000; /* Change text color to black on hover */
 }
 
-
-/* Portfolio Styling */
+/*Lab Activities 1-4*/
 #portfolio {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Lab Section */
 .lab {
     background-color: #f4f4f9; /* Subtle background for lab content */
     padding: 20px;
@@ -446,53 +490,6 @@ button:hover {
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow effect */
 }
-
-#know-more h2 {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-#know-more p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    padding: 15px;
-    background-color: #E5D9F2;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    #know-more {
-        padding: 15px; /* Reduce padding on smaller screens */
-    }
-
-    #know-more h2 {
-        font-size: 1.5rem; /* Slightly reduce heading size */
-    }
-
-    #know-more p {
-        font-size: 0.95rem; /* Adjust paragraph font size */
-    }
-}
-
-@media (max-width: 480px) {
-    #know-more {
-        padding: 10px; /* Further reduce padding on very small screens */
-    }
-
-    #know-more h2 {
-        font-size: 1.3rem; /* Smaller heading size */
-    }
-
-    #know-more p {
-        font-size: 0.9rem; /* Adjust font size for mobile */
-    }
-}
-
 
 .travels {
     padding: 30px 0 60px 0; }

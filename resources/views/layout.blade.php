@@ -28,7 +28,7 @@
                 <p>Through this laboratory activity, I learned how to reduce repetitive code. The layout file is very helpful because whenever 
                     you need to modify a webpage, it’s easy to update other pages since they share a common CSS file. This is especially useful 
                     for maintaining uniformity across the website. We also added another webpage, the menu page, as we were instructed to include 
-                    an additional page that could be used in the database. I really enjoyed this activity.
+                    an additional page that could be used in the database. 
                 </p>
 
             <!-- Challenges Section -->
