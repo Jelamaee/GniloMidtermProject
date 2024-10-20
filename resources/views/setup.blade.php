@@ -1,6 +1,6 @@
 @extends('Components.Layout')
 
-@section('title', 'Portfolio')
+@section('title', 'Setup')
 
 @section('content')
 

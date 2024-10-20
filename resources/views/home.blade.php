@@ -53,6 +53,23 @@
         </div>
     </section>
 
+    <div id="contact">
+                 <h1>Contact</h1> 
+                 <form>
+                     <input type="text" placeholder="Name" required>
+                     <input type="email" placeholder="Email" required><br>
+                     <textarea placeholder="Your message" required rows="5"></textarea><br>
+                     <button class="btn_one">Send</button>
+                 </form> 
+                 <div id="details">
+                    <a class="btn_social" href="tel:+1234567890"><i class="fas fa-phone"></i></a>
+                    <a class="btn_social" href="mailto:jmng2022-7904-97516@bicol-u.edu.ph"><i class="fas fa-at"></i></a>
+                    <a class="btn_social" href="https://web.facebook.com/jelamae.gnilo" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a class="btn_social" href="https://github.com/Jelamaee" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+  
+             </div>
+
     <script>
     // JavaScript for typing effect
     const username = "{{ $username }}"; // Fetching the username
